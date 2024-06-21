@@ -103,12 +103,14 @@
             this.mFileNew.Name = "mFileNew";
             this.mFileNew.Size = new System.Drawing.Size(224, 32);
             this.mFileNew.Text = "New";
+            this.mFileNew.Click += new System.EventHandler(this.mFileNew_Click);
             // 
             // mFileNW
             // 
             this.mFileNW.Name = "mFileNW";
             this.mFileNW.Size = new System.Drawing.Size(224, 32);
             this.mFileNW.Text = "New Window";
+            this.mFileNW.Click += new System.EventHandler(this.mFileNW_Click);
             // 
             // toolStripSeparator1
             // 
@@ -120,18 +122,21 @@
             this.mFileOpen.Name = "mFileOpen";
             this.mFileOpen.Size = new System.Drawing.Size(224, 32);
             this.mFileOpen.Text = "Open";
+            this.mFileOpen.Click += new System.EventHandler(this.mFileOpen_Click);
             // 
             // mFileSave
             // 
             this.mFileSave.Name = "mFileSave";
             this.mFileSave.Size = new System.Drawing.Size(224, 32);
             this.mFileSave.Text = "Save";
+            this.mFileSave.Click += new System.EventHandler(this.mFileSave_Click);
             // 
             // mFileSA
             // 
             this.mFileSA.Name = "mFileSA";
             this.mFileSA.Size = new System.Drawing.Size(224, 32);
             this.mFileSA.Text = "Save As";
+            this.mFileSA.Click += new System.EventHandler(this.mFileSA_Click);
             // 
             // toolStripSeparator2
             // 
@@ -143,6 +148,7 @@
             this.mFileExit.Name = "mFileExit";
             this.mFileExit.Size = new System.Drawing.Size(224, 32);
             this.mFileExit.Text = "Exit";
+            this.mFileExit.Click += new System.EventHandler(this.mFileExit_Click);
             // 
             // mEdit
             // 
@@ -163,53 +169,53 @@
             // mEditUndo
             // 
             this.mEditUndo.Name = "mEditUndo";
-            this.mEditUndo.Size = new System.Drawing.Size(224, 32);
+            this.mEditUndo.Size = new System.Drawing.Size(194, 32);
             this.mEditUndo.Text = "Undo";
             // 
             // mEditRedo
             // 
             this.mEditRedo.Name = "mEditRedo";
-            this.mEditRedo.Size = new System.Drawing.Size(224, 32);
+            this.mEditRedo.Size = new System.Drawing.Size(194, 32);
             this.mEditRedo.Text = "Redo";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(191, 6);
             // 
             // mEditCut
             // 
             this.mEditCut.Name = "mEditCut";
-            this.mEditCut.Size = new System.Drawing.Size(224, 32);
+            this.mEditCut.Size = new System.Drawing.Size(194, 32);
             this.mEditCut.Text = "Cut";
             // 
             // mEditCopy
             // 
             this.mEditCopy.Name = "mEditCopy";
-            this.mEditCopy.Size = new System.Drawing.Size(224, 32);
+            this.mEditCopy.Size = new System.Drawing.Size(194, 32);
             this.mEditCopy.Text = "Copy";
             // 
             // mEditPaste
             // 
             this.mEditPaste.Name = "mEditPaste";
-            this.mEditPaste.Size = new System.Drawing.Size(224, 32);
+            this.mEditPaste.Size = new System.Drawing.Size(194, 32);
             this.mEditPaste.Text = "Paste";
             // 
             // mEditDelete
             // 
             this.mEditDelete.Name = "mEditDelete";
-            this.mEditDelete.Size = new System.Drawing.Size(224, 32);
+            this.mEditDelete.Size = new System.Drawing.Size(194, 32);
             this.mEditDelete.Text = "Delete";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
             // 
             // mEditDH
             // 
             this.mEditDH.Name = "mEditDH";
-            this.mEditDH.Size = new System.Drawing.Size(224, 32);
+            this.mEditDH.Size = new System.Drawing.Size(194, 32);
             this.mEditDH.Text = "Date/Hour";
             // 
             // mFormat
@@ -249,25 +255,25 @@
             this.mViewZoomReduce,
             this.mViewZoomRestore});
             this.mViewZoom.Name = "mViewZoom";
-            this.mViewZoom.Size = new System.Drawing.Size(224, 32);
+            this.mViewZoom.Size = new System.Drawing.Size(188, 32);
             this.mViewZoom.Text = "Zoom";
             // 
             // mViewZoomEnlarge
             // 
             this.mViewZoomEnlarge.Name = "mViewZoomEnlarge";
-            this.mViewZoomEnlarge.Size = new System.Drawing.Size(224, 32);
+            this.mViewZoomEnlarge.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomEnlarge.Text = "Enlarge";
             // 
             // mViewZoomReduce
             // 
             this.mViewZoomReduce.Name = "mViewZoomReduce";
-            this.mViewZoomReduce.Size = new System.Drawing.Size(224, 32);
+            this.mViewZoomReduce.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomReduce.Text = "Reduce";
             // 
             // mViewZoomRestore
             // 
             this.mViewZoomRestore.Name = "mViewZoomRestore";
-            this.mViewZoomRestore.Size = new System.Drawing.Size(224, 32);
+            this.mViewZoomRestore.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomRestore.Text = "Restore";
             // 
             // mViewStatusBar
@@ -276,7 +282,7 @@
             this.mViewStatusBar.CheckOnClick = true;
             this.mViewStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mViewStatusBar.Name = "mViewStatusBar";
-            this.mViewStatusBar.Size = new System.Drawing.Size(224, 32);
+            this.mViewStatusBar.Size = new System.Drawing.Size(188, 32);
             this.mViewStatusBar.Text = "Status Bar";
             // 
             // mHelp
@@ -291,13 +297,13 @@
             // mHelpVH
             // 
             this.mHelpVH.Name = "mHelpVH";
-            this.mHelpVH.Size = new System.Drawing.Size(224, 32);
+            this.mHelpVH.Size = new System.Drawing.Size(191, 32);
             this.mHelpVH.Text = "View Help";
             // 
             // mHelpAbout
             // 
             this.mHelpAbout.Name = "mHelpAbout";
-            this.mHelpAbout.Size = new System.Drawing.Size(224, 32);
+            this.mHelpAbout.Size = new System.Drawing.Size(191, 32);
             this.mHelpAbout.Text = "About";
             // 
             // statusBar
