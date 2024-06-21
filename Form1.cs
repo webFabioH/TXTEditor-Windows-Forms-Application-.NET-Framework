@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -41,11 +42,55 @@ namespace TXTEditor
 
         private void mFileSave_Click(object sender, EventArgs e)
         {
+            if (File.Exists(Manager.FilePath))
+            {
+                SaveFile(Manager.FilePath);
+            }
+            else
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.Title = "Save...";
+                dialog.Filter = "rich text file |*.rtf|text|*.txt|all|*.*";
+                dialog.CheckFileExists = false;
+                dialog.CheckPathExists = true;
+                
+                var result  = dialog.ShowDialog();
 
+                if (result != DialogResult.Cancel && result != DialogResult.Abort)
+                {
+                    SaveFile(dialog.FileName);
+                }
+            }
         }
 
         private void mFileSA_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void SaveFile(string path)
+        {
+            StreamWriter writer = null;
+
+            try
+            {
+                writer = new StreamWriter(path, false);
+                writer.Write(txtContent.Text);
+
+                FileInfo file = new FileInfo(path);
+                Manager.FolderPath = file.DirectoryName + "\\";
+                Manager.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
+                Manager.FileExt = file.Extension;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Saving File: \n" + ex.Message);
+            }
+            finally
+            {
+                writer.Close();
+            }
 
         }
 

@@ -101,52 +101,52 @@
             // mFileNew
             // 
             this.mFileNew.Name = "mFileNew";
-            this.mFileNew.Size = new System.Drawing.Size(224, 32);
+            this.mFileNew.Size = new System.Drawing.Size(220, 32);
             this.mFileNew.Text = "New";
             this.mFileNew.Click += new System.EventHandler(this.mFileNew_Click);
             // 
             // mFileNW
             // 
             this.mFileNW.Name = "mFileNW";
-            this.mFileNW.Size = new System.Drawing.Size(224, 32);
+            this.mFileNW.Size = new System.Drawing.Size(220, 32);
             this.mFileNW.Text = "New Window";
             this.mFileNW.Click += new System.EventHandler(this.mFileNW_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
             // 
             // mFileOpen
             // 
             this.mFileOpen.Name = "mFileOpen";
-            this.mFileOpen.Size = new System.Drawing.Size(224, 32);
+            this.mFileOpen.Size = new System.Drawing.Size(220, 32);
             this.mFileOpen.Text = "Open";
             this.mFileOpen.Click += new System.EventHandler(this.mFileOpen_Click);
             // 
             // mFileSave
             // 
             this.mFileSave.Name = "mFileSave";
-            this.mFileSave.Size = new System.Drawing.Size(224, 32);
+            this.mFileSave.Size = new System.Drawing.Size(220, 32);
             this.mFileSave.Text = "Save";
             this.mFileSave.Click += new System.EventHandler(this.mFileSave_Click);
             // 
             // mFileSA
             // 
             this.mFileSA.Name = "mFileSA";
-            this.mFileSA.Size = new System.Drawing.Size(224, 32);
+            this.mFileSA.Size = new System.Drawing.Size(220, 32);
             this.mFileSA.Text = "Save As";
             this.mFileSA.Click += new System.EventHandler(this.mFileSA_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(217, 6);
             // 
             // mFileExit
             // 
             this.mFileExit.Name = "mFileExit";
-            this.mFileExit.Size = new System.Drawing.Size(224, 32);
+            this.mFileExit.Size = new System.Drawing.Size(220, 32);
             this.mFileExit.Text = "Exit";
             this.mFileExit.Click += new System.EventHandler(this.mFileExit_Click);
             // 
@@ -326,6 +326,7 @@
             // txtContent
             // 
             this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContent.Location = new System.Drawing.Point(0, 36);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(782, 491);
