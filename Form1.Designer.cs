@@ -169,14 +169,16 @@
             // mEditUndo
             // 
             this.mEditUndo.Name = "mEditUndo";
-            this.mEditUndo.Size = new System.Drawing.Size(194, 32);
+            this.mEditUndo.Size = new System.Drawing.Size(224, 32);
             this.mEditUndo.Text = "Undo";
+            this.mEditUndo.Click += new System.EventHandler(this.mEditUndo_Click);
             // 
             // mEditRedo
             // 
             this.mEditRedo.Name = "mEditRedo";
-            this.mEditRedo.Size = new System.Drawing.Size(194, 32);
+            this.mEditRedo.Size = new System.Drawing.Size(224, 32);
             this.mEditRedo.Text = "Redo";
+            this.mEditRedo.Click += new System.EventHandler(this.mEditRedo_Click);
             // 
             // toolStripSeparator3
             // 
@@ -186,26 +188,30 @@
             // mEditCut
             // 
             this.mEditCut.Name = "mEditCut";
-            this.mEditCut.Size = new System.Drawing.Size(194, 32);
+            this.mEditCut.Size = new System.Drawing.Size(224, 32);
             this.mEditCut.Text = "Cut";
+            this.mEditCut.Click += new System.EventHandler(this.mEditCut_Click);
             // 
             // mEditCopy
             // 
             this.mEditCopy.Name = "mEditCopy";
-            this.mEditCopy.Size = new System.Drawing.Size(194, 32);
+            this.mEditCopy.Size = new System.Drawing.Size(224, 32);
             this.mEditCopy.Text = "Copy";
+            this.mEditCopy.Click += new System.EventHandler(this.mEditCopy_Click);
             // 
             // mEditPaste
             // 
             this.mEditPaste.Name = "mEditPaste";
-            this.mEditPaste.Size = new System.Drawing.Size(194, 32);
+            this.mEditPaste.Size = new System.Drawing.Size(224, 32);
             this.mEditPaste.Text = "Paste";
+            this.mEditPaste.Click += new System.EventHandler(this.mEditPaste_Click);
             // 
             // mEditDelete
             // 
             this.mEditDelete.Name = "mEditDelete";
-            this.mEditDelete.Size = new System.Drawing.Size(194, 32);
+            this.mEditDelete.Size = new System.Drawing.Size(224, 32);
             this.mEditDelete.Text = "Delete";
+            this.mEditDelete.Click += new System.EventHandler(this.mEditDelete_Click);
             // 
             // toolStripSeparator4
             // 
@@ -215,8 +221,9 @@
             // mEditDH
             // 
             this.mEditDH.Name = "mEditDH";
-            this.mEditDH.Size = new System.Drawing.Size(194, 32);
+            this.mEditDH.Size = new System.Drawing.Size(224, 32);
             this.mEditDH.Text = "Date/Hour";
+            this.mEditDH.Click += new System.EventHandler(this.mEditDH_Click);
             // 
             // mFormat
             // 

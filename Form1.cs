@@ -157,6 +157,69 @@ namespace TXTEditor
         {
             mFileSave.Enabled = true;
         }
+
+        #endregion
+
+        #region Menu Edit
+        private void mEditUndo_Click(object sender, EventArgs e)
+        {
+            txtContent.Undo();
+        }
+
+        private void mEditRedo_Click(object sender, EventArgs e)
+        {
+            txtContent.Redo();
+        }
+
+        private void mEditCut_Click(object sender, EventArgs e)
+        {
+            txtContent.Cut();
+        }
+
+        private void mEditCopy_Click(object sender, EventArgs e)
+        {
+            txtContent.Copy();
+        }
+
+        private void mEditPaste_Click(object sender, EventArgs e)
+        {
+            txtContent.Paste();
+        }
+
+        private void mEditDelete_Click(object sender, EventArgs e)
+        {
+            txtContent.Text = txtContent.Text.Remove(txtContent.SelectionStart, txtContent.SelectedText.Length);
+        }
+
+        private void mEditDH_Click(object sender, EventArgs e)
+        {
+            int index = txtContent.SelectionStart;
+            string datehour = DateTime.Now.ToString();
+
+            if (index == txtContent.Text.Length)
+            {
+                txtContent.Text = txtContent.Text + datehour;
+                txtContent.SelectionStart = index + datehour.Length;
+                return;
+            }
+
+            string temp = "";
+            for (int i = 0; i < txtContent.Text.Length; i++)
+            {
+                if (i == txtContent.SelectionStart)
+                {
+                    temp += datehour;
+                    temp += txtContent.Text[i];
+                }
+                else
+                {
+                    temp += txtContent.Text[i];
+                }
+            }
+
+            txtContent.Text = temp;
+            txtContent.SelectionStart = index + datehour.Length;
+        }
         #endregion
 
 
