@@ -23,6 +23,8 @@ namespace TXTEditor
         private void mFileNew_Click(object sender, EventArgs e)
         {
             txtContent.Clear(); 
+            mFileSave.Enabled = true;
+            Text = Application.ProductName;
         }
 
         private void mFileNW_Click(object sender, EventArgs e)
@@ -37,7 +39,40 @@ namespace TXTEditor
 
         private void mFileOpen_Click(object sender, EventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Open...";
+            dialog.Filter = "rich text file|*.rtf|text|*.txt|all|*.*";
 
+            DialogResult result = dialog.ShowDialog();
+            if (result != DialogResult.Cancel && result != DialogResult.Abort)
+            {
+                if (File.Exists(dialog.FileName))
+                {
+                    FileInfo file = new FileInfo(dialog.FileName);
+                    Text = Application.ProductName + " - " + file.Name;
+
+                    Manager.FolderPath = file.DirectoryName + "\\";
+                    Manager.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
+                    Manager.FileExt = file.Extension;
+
+                    StreamReader stream = null;
+
+                    try
+                    {
+                        stream = new StreamReader(file.FullName, true);
+                        txtContent.Text = stream.ReadToEnd();
+                        mFileSave.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Unsupported file format. \n" + ex.Message);
+                    }
+                    finally
+                    {
+                        stream.Close();
+                    }
+                }
+            }
         }
 
         private void mFileSave_Click(object sender, EventArgs e)
@@ -65,7 +100,18 @@ namespace TXTEditor
 
         private void mFileSA_Click(object sender, EventArgs e)
         {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Save As...";
+            dialog.Filter = "rich text file |*.rtf|text|*.txt|all|*.*";
+            dialog.CheckFileExists = false;
+            dialog.CheckPathExists = true;
 
+            var result = dialog.ShowDialog();
+
+            if (result != DialogResult.Cancel && result != DialogResult.Abort)
+            {
+                SaveFile(dialog.FileName);
+            }
         }
 
         private void SaveFile(string path)
@@ -82,6 +128,9 @@ namespace TXTEditor
                 Manager.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
                 Manager.FileExt = file.Extension;
 
+                Text = Application.ProductName + " - " + file.Name;
+
+                mFileSave.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -103,7 +152,13 @@ namespace TXTEditor
                 Application.Exit();
             }
         }
+
+        private void txtContent_TextChanged(object sender, EventArgs e)
+        {
+            mFileSave.Enabled = true;
+        }
         #endregion
+
 
     }
 }
