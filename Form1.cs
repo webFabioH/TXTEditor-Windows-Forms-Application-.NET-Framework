@@ -272,6 +272,11 @@ namespace TXTEditor
             statusBar.Visible = mViewStatusBar.Checked;
         }
 
+        private void mViewToolBar_Click(object sender, EventArgs e)
+        {
+            ToolBar.Visible = mViewToolBar.Checked;
+        }
+
         private void RefreshStatusBar(float zoom)
         {
             statusBarLabel.Text = $"{Math.Round(zoom * 100)}%";
@@ -290,6 +295,8 @@ namespace TXTEditor
             FormAbout fs = new FormAbout();
             fs.Show();
         }
+
         #endregion
+
     }
 }
