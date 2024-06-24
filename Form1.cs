@@ -220,8 +220,32 @@ namespace TXTEditor
             txtContent.Text = temp;
             txtContent.SelectionStart = index + datehour.Length;
         }
+
         #endregion
 
+        #region Menu Format
+        private void mFormatALW_Click(object sender, EventArgs e)
+        {
+            txtContent.WordWrap = mFormatALW.Checked;
+        }
 
+        private void mFormatFont_Click(object sender, EventArgs e)
+        {
+            FontDialog font = new FontDialog();
+            font.ShowColor = true;
+            font.ShowEffects = true;
+
+            font.Font = txtContent.Font;
+            font.Color = txtContent.ForeColor;
+
+            DialogResult result = font.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                txtContent.Font = font.Font;
+                txtContent.ForeColor = font.Color;  
+            }
+        }
+        #endregion
     }
 }

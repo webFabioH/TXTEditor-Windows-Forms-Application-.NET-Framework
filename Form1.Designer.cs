@@ -183,7 +183,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
             // 
             // mEditCut
             // 
@@ -216,7 +216,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
             // mEditDH
             // 
@@ -236,15 +236,18 @@
             // 
             // mFormatALW
             // 
+            this.mFormatALW.CheckOnClick = true;
             this.mFormatALW.Name = "mFormatALW";
             this.mFormatALW.Size = new System.Drawing.Size(321, 32);
             this.mFormatALW.Text = "Automatic line wrapping";
+            this.mFormatALW.Click += new System.EventHandler(this.mFormatALW_Click);
             // 
             // mFormatFont
             // 
             this.mFormatFont.Name = "mFormatFont";
             this.mFormatFont.Size = new System.Drawing.Size(321, 32);
             this.mFormatFont.Text = "Font...";
+            this.mFormatFont.Click += new System.EventHandler(this.mFormatFont_Click);
             // 
             // mView
             // 
@@ -339,6 +342,7 @@
             this.txtContent.Size = new System.Drawing.Size(782, 491);
             this.txtContent.TabIndex = 2;
             this.txtContent.Text = "";
+            this.txtContent.WordWrap = false;
             this.txtContent.TextChanged += new System.EventHandler(this.txtContent_TextChanged);
             // 
             // Form1
