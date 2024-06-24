@@ -311,14 +311,16 @@
             // mHelpVH
             // 
             this.mHelpVH.Name = "mHelpVH";
-            this.mHelpVH.Size = new System.Drawing.Size(191, 32);
+            this.mHelpVH.Size = new System.Drawing.Size(224, 32);
             this.mHelpVH.Text = "View Help";
+            this.mHelpVH.Click += new System.EventHandler(this.mHelpVH_Click);
             // 
             // mHelpAbout
             // 
             this.mHelpAbout.Name = "mHelpAbout";
-            this.mHelpAbout.Size = new System.Drawing.Size(191, 32);
+            this.mHelpAbout.Size = new System.Drawing.Size(224, 32);
             this.mHelpAbout.Text = "About";
+            this.mHelpAbout.Click += new System.EventHandler(this.mHelpAbout_Click);
             // 
             // statusBar
             // 

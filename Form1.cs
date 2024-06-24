@@ -277,5 +277,19 @@ namespace TXTEditor
             statusBarLabel.Text = $"{Math.Round(zoom * 100)}%";
         }
         #endregion
+
+        #region Menu Help
+        private void mHelpVH_Click(object sender, EventArgs e)
+        {
+            FormHelp f = new FormHelp();
+            f.Show(); 
+        }
+
+        private void mHelpAbout_Click(object sender, EventArgs e)
+        {
+            FormAbout fs = new FormAbout();
+            fs.Show();
+        }
+        #endregion
     }
 }
