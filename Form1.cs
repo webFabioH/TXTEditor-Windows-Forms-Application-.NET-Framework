@@ -247,5 +247,35 @@ namespace TXTEditor
             }
         }
         #endregion
+
+        #region Menu View
+        private void mViewZoomEnlarge_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor += 0.10f;
+            RefreshStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void mViewZoomReduce_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor -= 0.10f;
+            RefreshStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void mViewZoomRestore_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor = 1;
+            RefreshStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void mViewStatusBar_Click(object sender, EventArgs e)
+        {
+            statusBar.Visible = mViewStatusBar.Checked;
+        }
+
+        private void RefreshStatusBar(float zoom)
+        {
+            statusBarLabel.Text = $"{Math.Round(zoom * 100)}%";
+        }
+        #endregion
     }
 }

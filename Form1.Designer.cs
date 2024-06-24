@@ -61,7 +61,7 @@
             this.mHelpVH = new System.Windows.Forms.ToolStripMenuItem();
             this.mHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBar = new System.Windows.Forms.StatusStrip();
-            this.statusBarlabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusBarLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtContent = new System.Windows.Forms.RichTextBox();
             this.menuBar.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -169,59 +169,59 @@
             // mEditUndo
             // 
             this.mEditUndo.Name = "mEditUndo";
-            this.mEditUndo.Size = new System.Drawing.Size(224, 32);
+            this.mEditUndo.Size = new System.Drawing.Size(194, 32);
             this.mEditUndo.Text = "Undo";
             this.mEditUndo.Click += new System.EventHandler(this.mEditUndo_Click);
             // 
             // mEditRedo
             // 
             this.mEditRedo.Name = "mEditRedo";
-            this.mEditRedo.Size = new System.Drawing.Size(224, 32);
+            this.mEditRedo.Size = new System.Drawing.Size(194, 32);
             this.mEditRedo.Text = "Redo";
             this.mEditRedo.Click += new System.EventHandler(this.mEditRedo_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(191, 6);
             // 
             // mEditCut
             // 
             this.mEditCut.Name = "mEditCut";
-            this.mEditCut.Size = new System.Drawing.Size(224, 32);
+            this.mEditCut.Size = new System.Drawing.Size(194, 32);
             this.mEditCut.Text = "Cut";
             this.mEditCut.Click += new System.EventHandler(this.mEditCut_Click);
             // 
             // mEditCopy
             // 
             this.mEditCopy.Name = "mEditCopy";
-            this.mEditCopy.Size = new System.Drawing.Size(224, 32);
+            this.mEditCopy.Size = new System.Drawing.Size(194, 32);
             this.mEditCopy.Text = "Copy";
             this.mEditCopy.Click += new System.EventHandler(this.mEditCopy_Click);
             // 
             // mEditPaste
             // 
             this.mEditPaste.Name = "mEditPaste";
-            this.mEditPaste.Size = new System.Drawing.Size(224, 32);
+            this.mEditPaste.Size = new System.Drawing.Size(194, 32);
             this.mEditPaste.Text = "Paste";
             this.mEditPaste.Click += new System.EventHandler(this.mEditPaste_Click);
             // 
             // mEditDelete
             // 
             this.mEditDelete.Name = "mEditDelete";
-            this.mEditDelete.Size = new System.Drawing.Size(224, 32);
+            this.mEditDelete.Size = new System.Drawing.Size(194, 32);
             this.mEditDelete.Text = "Delete";
             this.mEditDelete.Click += new System.EventHandler(this.mEditDelete_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
             // 
             // mEditDH
             // 
             this.mEditDH.Name = "mEditDH";
-            this.mEditDH.Size = new System.Drawing.Size(224, 32);
+            this.mEditDH.Size = new System.Drawing.Size(194, 32);
             this.mEditDH.Text = "Date/Hour";
             this.mEditDH.Click += new System.EventHandler(this.mEditDH_Click);
             // 
@@ -273,18 +273,21 @@
             this.mViewZoomEnlarge.Name = "mViewZoomEnlarge";
             this.mViewZoomEnlarge.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomEnlarge.Text = "Enlarge";
+            this.mViewZoomEnlarge.Click += new System.EventHandler(this.mViewZoomEnlarge_Click);
             // 
             // mViewZoomReduce
             // 
             this.mViewZoomReduce.Name = "mViewZoomReduce";
             this.mViewZoomReduce.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomReduce.Text = "Reduce";
+            this.mViewZoomReduce.Click += new System.EventHandler(this.mViewZoomReduce_Click);
             // 
             // mViewZoomRestore
             // 
             this.mViewZoomRestore.Name = "mViewZoomRestore";
             this.mViewZoomRestore.Size = new System.Drawing.Size(166, 32);
             this.mViewZoomRestore.Text = "Restore";
+            this.mViewZoomRestore.Click += new System.EventHandler(this.mViewZoomRestore_Click);
             // 
             // mViewStatusBar
             // 
@@ -294,6 +297,7 @@
             this.mViewStatusBar.Name = "mViewStatusBar";
             this.mViewStatusBar.Size = new System.Drawing.Size(188, 32);
             this.mViewStatusBar.Text = "Status Bar";
+            this.mViewStatusBar.Click += new System.EventHandler(this.mViewStatusBar_Click);
             // 
             // mHelp
             // 
@@ -320,18 +324,18 @@
             // 
             this.statusBar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusBarlabel});
+            this.statusBarLabel});
             this.statusBar.Location = new System.Drawing.Point(0, 527);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(782, 26);
             this.statusBar.TabIndex = 1;
-            this.statusBar.Text = "statusStrip1";
+            this.statusBar.Text = "100%";
             // 
-            // statusBarlabel
+            // statusBarLabel
             // 
-            this.statusBarlabel.Name = "statusBarlabel";
-            this.statusBarlabel.Size = new System.Drawing.Size(49, 20);
-            this.statusBarlabel.Text = "100 %";
+            this.statusBarLabel.Name = "statusBarLabel";
+            this.statusBarLabel.Size = new System.Drawing.Size(49, 20);
+            this.statusBarLabel.Text = "100 %";
             // 
             // txtContent
             // 
@@ -401,7 +405,7 @@
         private System.Windows.Forms.ToolStripMenuItem mHelpVH;
         private System.Windows.Forms.ToolStripMenuItem mHelpAbout;
         private System.Windows.Forms.StatusStrip statusBar;
-        private System.Windows.Forms.ToolStripStatusLabel statusBarlabel;
+        private System.Windows.Forms.ToolStripStatusLabel statusBarLabel;
         private System.Windows.Forms.RichTextBox txtContent;
     }
 }
